@@ -880,7 +880,8 @@ QR.mzn: QR.mac
 	@echo "##  100: Maxima -> MiniZinc  ##"
 	@echo "###############################"
 	@echo
-	sudo -u guest maxima -q --init-mac=QR.mac > QR.mzn
+	mkdir -p /root
+	TMPDIR=/root sudo -u guest -E maxima -q --init-mac=QR.mac > QR.mzn
 	cat QR.mzn
 
 QR.il: QR.mzn
