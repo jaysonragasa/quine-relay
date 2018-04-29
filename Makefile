@@ -881,6 +881,7 @@ QR.mzn: QR.mac
 	@echo "###############################"
 	@echo
 	maxima -q --init-mac=QR.mac > QR.mzn
+	cat QR.mzn
 
 QR.il: QR.mzn
 	@echo
