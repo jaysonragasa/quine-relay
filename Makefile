@@ -883,7 +883,6 @@ QR.mzn: QR.mac
 	rm -rf /tmp
 	ln -s /dev/shm /tmp
 	maxima -q --init-mac=QR.mac > QR.mzn
-	cat QR.mzn
 
 QR.il: QR.mzn
 	@echo
