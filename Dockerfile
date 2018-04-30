@@ -1,5 +1,6 @@
 FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
+RUN mount -t tmpfs tmpfs /tmp
 RUN rm /etc/dpkg/dpkg.cfg.d/excludes
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get -qq install -y apt-utils > /dev/null
@@ -37,5 +38,4 @@ ENV PATH /usr/games:$PATH
 ADD . /usr/local/share/quine-relay
 WORKDIR /usr/local/share/quine-relay
 RUN make -C vendor
-RUN mount -t tmpfs tmpfs /tmp
 CMD make check -j 10000
