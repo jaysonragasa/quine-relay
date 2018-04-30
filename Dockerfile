@@ -37,8 +37,5 @@ ENV PATH /usr/games:$PATH
 ADD . /usr/local/share/quine-relay
 WORKDIR /usr/local/share/quine-relay
 RUN make -C vendor
-RUN useradd guest
-RUN chown -R guest .
-RUN apt-get install -y sudo strace
 RUN mount -t tmpfs tmpfs /tmp
 CMD make check -j 10000

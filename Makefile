@@ -880,7 +880,7 @@ QR.mzn: QR.mac
 	@echo "##  100: Maxima -> MiniZinc  ##"
 	@echo "###############################"
 	@echo
-	strace maxima -q --init-mac=QR.mac > QR.mzn
+	maxima -q --init-mac=QR.mac > QR.mzn
 	cat QR.mzn
 
 QR.il: QR.mzn
