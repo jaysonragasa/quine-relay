@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
-RUN mount -t tmpfs tmpfs /tmp
+RUN mount
 RUN rm /etc/dpkg/dpkg.cfg.d/excludes
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get -qq install -y apt-utils > /dev/null
