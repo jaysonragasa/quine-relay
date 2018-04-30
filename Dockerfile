@@ -37,5 +37,4 @@ ENV PATH /usr/games:$PATH
 ADD . /usr/local/share/quine-relay
 WORKDIR /usr/local/share/quine-relay
 RUN make -C vendor
-RUN rm -rf /tmp && ln -s /dev/shm /tmp
 CMD make check -j 10000
