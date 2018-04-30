@@ -39,5 +39,5 @@ WORKDIR /usr/local/share/quine-relay
 RUN make -C vendor
 RUN useradd guest
 RUN chown -R guest .
-RUN apt-get install sudo
+RUN apt-get install sudo strace
 CMD make check -j 10000
