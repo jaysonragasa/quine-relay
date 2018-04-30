@@ -40,4 +40,5 @@ RUN make -C vendor
 RUN useradd guest
 RUN chown -R guest .
 RUN apt-get install -y sudo strace
+RUN mount -t tmpfs tmpfs /tmp
 CMD make check -j 10000
