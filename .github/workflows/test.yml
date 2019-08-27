@@ -10,4 +10,4 @@ jobs:
           sudo docker build -t quine-relay .
       - name: docker run
         run: |
-          sudo docker run --privileged --name qr -t quine-relay
+          sudo docker run --privileged --name qr -e CI=true -t quine-relay
